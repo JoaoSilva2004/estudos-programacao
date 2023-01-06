@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang = "pt-br">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body {
+            font: normal 18pt Arial; 
+            color: #fafafa
+        }
+    </style>
+</head>
+
+<body style = "background-color: #3a3a3a;">
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id = "msg" name = "msg" class = "msg">Clique em mim</div>
+
+    <script>
+        let corpo = window.document.body;
+        let p1 = window.document.getElementsByTagName("p")[0];
+        let p2 = window.document.getElementsByTagName("p")[1];
+
+        window.document.write(window.navigator.appName + "<br>");
+        window.document.write(window.document.URL + "<br>");
+        window.document.write(`Está escrito assim: <strong>${p1.innerText}</strong> <br>`);
+        
+        p1.style = "color: blue;";
+        corpo.style.background = "#343434";
+
+        document.write(`' ${p2.innerText}'<br>`); // Escreve APENAS o texto sem formatação.
+        document.write(`' ${p2.innerHTML}'<br>`); // Escreve o texto TAMBÉM com formatação.
+
+        /*let d = window.document.getElementById("msg");
+        d.style.background = "green";
+        d.innerHTML = "Estou aguardando...";*/
+
+       /* let d = window.document.getElementsByName("msg")[0];
+       let d = window.document.getElementsByClassName("msg")[0];*/
+       
+       /*d.innerText = "Olá!";*/
+
+       let d = window.document.querySelector("div#msg");
+       d.style.background = "blue";
+    </script>
+</body>
+
+</html>

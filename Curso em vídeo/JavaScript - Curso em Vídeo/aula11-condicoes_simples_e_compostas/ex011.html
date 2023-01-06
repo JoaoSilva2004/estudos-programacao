@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang = "pt-br">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+    <title>Exercício</title>
+
+    <style>
+        body {
+            background-color: #3a3a3a;
+            font: normal 18pt Arial; 
+            color: #fafafa;
+            padding: 0px;
+            margin: 0px; 
+        }
+
+        #content {
+            padding: 30px;
+        }
+
+        #msg {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id = "content">
+        Insira o país onde você mora: <input type = "text" name = "txt-pais" id = "txt-pais" placeholder = "Ex. Brasil">
+        <input type = "button" value = "Continuar" onclick = "ondeMora()">
+        <div id = "msg">Diga o país onde você mora...</div>
+    </div>
+
+    <script>
+        function ondeMora() {
+            let txtPais = document.querySelector("input#txt-pais");
+            let pais = String(txtPais.value);
+            let msg = document.querySelector("div#msg");
+
+            msg.innerHTML = `Residente em <strong>${pais}</strong>.<br>`;
+
+            if (pais == "Brasil") {
+                msg.innerHTML += "Você é <strong>brasileiro</strong>!";
+            } else {
+                msg.innerHTML += "Você é <strong>estrangeiro</strong>!";
+            }
+        }
+    </script>
+</body>
+
+</html>

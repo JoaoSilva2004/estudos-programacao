@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+body {
+    font: normal 13pt Arial;
+    padding: 30px;
+    margin: 0px;
+    color: #353535;
+}
+
+header, footer {
+    text-align: center;
+    color: #fafafa;
+    margin: 30px;
+}
+
+/*header {
+
+}*/
+
+section {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+}
+
+#img {
+    display: block;
+    margin: 0 auto;
+}
+
+#msg {
+    margin: 2em 0;
+}
+
+footer {
+    font-style: italic;
+}
